@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div style="height:200px;"></div>
+    <main id="main">
+        <div class="wrapper">
+            <div class="circle">
+                <div :class="classChange">
+                    <div v-for="(name, index) in names" class="label">
+                        <a class="label__link" @click="rotate(index)">
+                            <div class="label__link-box">
+                                <!-- <div class="label__index">{{index}}</div> -->
+                                <div class="label__link-box-center -fake">
+                                    <div class="label__link-box-center-center">
+                                       <div class=" label__link-inner">{{name}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <img :src="planetImg" alt="">
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        new Vue({
+            el: '#main',
+
+            data: {     // 變數放這裡！
+                names: ['MARS', 'MERCURY', 'VENUS', 'JUPITER', 'SATURN', 'URANUS', 'NEPTUNE'],
+                classNum: 3,           
+
+            },
+
+            methods: {
+                rotate(index){
+                    this.classNum = index;
+                },
+            },
+
+            computed: {
+                classChange(){
+                    return `ring-display -current-${this.classNum}`;
+                },
+                planetImg(){
+                    return `./img/${this.names[this.classNum]}.png`;
+                }
+            },
+
+        })
+    </script>
+</body>
+</html>

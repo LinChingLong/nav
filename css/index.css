@@ -1,0 +1,766 @@
+main {
+  overflow: hidden;
+  padding-top: 50px;
+}
+main .wrapper {
+  width: 1500px;
+  margin: 0 auto;
+}
+main .wrapper .circle {
+  width: 1500px;
+  height: 1500px;
+  position: relative;
+}
+main .wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1150px;
+  z-index: -2;
+}
+main .wrapper .ring-display {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  border-radius: 50%;
+  z-index: 0;
+  transition: 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  pointer-events: none;
+}
+main .wrapper .ring-display::before, main .wrapper .ring-display::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+main .wrapper .ring-display::after {
+  width: 85%;
+  height: 85%;
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(1) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(1) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(2) {
+  transform: rotate(-18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(2) .label__link {
+  transform: rotate(18deg);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(3) {
+  transform: rotate(-36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(3) .label__link {
+  transform: rotate(36deg);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(4) {
+  transform: rotate(-54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(4) .label__link {
+  transform: rotate(54deg);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(5) {
+  transform: rotate(-72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(5) .label__link {
+  transform: rotate(72deg);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(6) {
+  transform: rotate(-90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(6) .label__link {
+  transform: rotate(90deg);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(7) {
+  transform: rotate(-108deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(7) .label__link {
+  transform: rotate(108deg);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(8) {
+  transform: rotate(-126deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(8) .label__link {
+  transform: rotate(126deg);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(9) {
+  transform: rotate(-144deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(9) .label__link {
+  transform: rotate(144deg);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(10) {
+  transform: rotate(-162deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-0 .label:nth-child(10) .label__link {
+  transform: rotate(162deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(1) {
+  transform: rotate(18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(1) .label__link {
+  transform: rotate(-18deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(2) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(2) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(3) {
+  transform: rotate(-18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(3) .label__link {
+  transform: rotate(18deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(4) {
+  transform: rotate(-36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(4) .label__link {
+  transform: rotate(36deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(5) {
+  transform: rotate(-54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(5) .label__link {
+  transform: rotate(54deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(6) {
+  transform: rotate(-72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(6) .label__link {
+  transform: rotate(72deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(7) {
+  transform: rotate(-90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(7) .label__link {
+  transform: rotate(90deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(8) {
+  transform: rotate(-108deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(8) .label__link {
+  transform: rotate(108deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(9) {
+  transform: rotate(-126deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(9) .label__link {
+  transform: rotate(126deg);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(10) {
+  transform: rotate(-144deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-1 .label:nth-child(10) .label__link {
+  transform: rotate(144deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(1) {
+  transform: rotate(36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(1) .label__link {
+  transform: rotate(-36deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(2) {
+  transform: rotate(18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(2) .label__link {
+  transform: rotate(-18deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(3) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(3) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(4) {
+  transform: rotate(-18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(4) .label__link {
+  transform: rotate(18deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(5) {
+  transform: rotate(-36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(5) .label__link {
+  transform: rotate(36deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(6) {
+  transform: rotate(-54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(6) .label__link {
+  transform: rotate(54deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(7) {
+  transform: rotate(-72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(7) .label__link {
+  transform: rotate(72deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(8) {
+  transform: rotate(-90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(8) .label__link {
+  transform: rotate(90deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(9) {
+  transform: rotate(-108deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(9) .label__link {
+  transform: rotate(108deg);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(10) {
+  transform: rotate(-126deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-2 .label:nth-child(10) .label__link {
+  transform: rotate(126deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(1) {
+  transform: rotate(54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(1) .label__link {
+  transform: rotate(-54deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(2) {
+  transform: rotate(36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(2) .label__link {
+  transform: rotate(-36deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(3) {
+  transform: rotate(18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(3) .label__link {
+  transform: rotate(-18deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(4) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(4) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(5) {
+  transform: rotate(-18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(5) .label__link {
+  transform: rotate(18deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(6) {
+  transform: rotate(-36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(6) .label__link {
+  transform: rotate(36deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(7) {
+  transform: rotate(-54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(7) .label__link {
+  transform: rotate(54deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(8) {
+  transform: rotate(-72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(8) .label__link {
+  transform: rotate(72deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(9) {
+  transform: rotate(-90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(9) .label__link {
+  transform: rotate(90deg);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(10) {
+  transform: rotate(-108deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-3 .label:nth-child(10) .label__link {
+  transform: rotate(108deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(1) {
+  transform: rotate(72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(1) .label__link {
+  transform: rotate(-72deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(2) {
+  transform: rotate(54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(2) .label__link {
+  transform: rotate(-54deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(3) {
+  transform: rotate(36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(3) .label__link {
+  transform: rotate(-36deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(4) {
+  transform: rotate(18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(4) .label__link {
+  transform: rotate(-18deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(5) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(5) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(6) {
+  transform: rotate(-18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(6) .label__link {
+  transform: rotate(18deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(7) {
+  transform: rotate(-36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(7) .label__link {
+  transform: rotate(36deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(8) {
+  transform: rotate(-54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(8) .label__link {
+  transform: rotate(54deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(9) {
+  transform: rotate(-72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(9) .label__link {
+  transform: rotate(72deg);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(10) {
+  transform: rotate(-90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-4 .label:nth-child(10) .label__link {
+  transform: rotate(90deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(1) {
+  transform: rotate(90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(1) .label__link {
+  transform: rotate(-90deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(2) {
+  transform: rotate(72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(2) .label__link {
+  transform: rotate(-72deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(3) {
+  transform: rotate(54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(3) .label__link {
+  transform: rotate(-54deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(4) {
+  transform: rotate(36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(4) .label__link {
+  transform: rotate(-36deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(5) {
+  transform: rotate(18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(5) .label__link {
+  transform: rotate(-18deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(6) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(6) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(7) {
+  transform: rotate(-18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(7) .label__link {
+  transform: rotate(18deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(8) {
+  transform: rotate(-36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(8) .label__link {
+  transform: rotate(36deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(9) {
+  transform: rotate(-54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(9) .label__link {
+  transform: rotate(54deg);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(10) {
+  transform: rotate(-72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-5 .label:nth-child(10) .label__link {
+  transform: rotate(72deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(1) {
+  transform: rotate(108deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(1) .label__link {
+  transform: rotate(-108deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(2) {
+  transform: rotate(90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(2) .label__link {
+  transform: rotate(-90deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(3) {
+  transform: rotate(72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(3) .label__link {
+  transform: rotate(-72deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(4) {
+  transform: rotate(54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(4) .label__link {
+  transform: rotate(-54deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(5) {
+  transform: rotate(36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(5) .label__link {
+  transform: rotate(-36deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(6) {
+  transform: rotate(18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(6) .label__link {
+  transform: rotate(-18deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(7) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(7) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(8) {
+  transform: rotate(-18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(8) .label__link {
+  transform: rotate(18deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(9) {
+  transform: rotate(-36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(9) .label__link {
+  transform: rotate(36deg);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(10) {
+  transform: rotate(-54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-6 .label:nth-child(10) .label__link {
+  transform: rotate(54deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(1) {
+  transform: rotate(126deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(1) .label__link {
+  transform: rotate(-126deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(2) {
+  transform: rotate(108deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(2) .label__link {
+  transform: rotate(-108deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(3) {
+  transform: rotate(90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(3) .label__link {
+  transform: rotate(-90deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(4) {
+  transform: rotate(72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(4) .label__link {
+  transform: rotate(-72deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(5) {
+  transform: rotate(54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(5) .label__link {
+  transform: rotate(-54deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(6) {
+  transform: rotate(36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(6) .label__link {
+  transform: rotate(-36deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(7) {
+  transform: rotate(18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(7) .label__link {
+  transform: rotate(-18deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(8) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(8) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(9) {
+  transform: rotate(-18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(9) .label__link {
+  transform: rotate(18deg);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(10) {
+  transform: rotate(-36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-7 .label:nth-child(10) .label__link {
+  transform: rotate(36deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(1) {
+  transform: rotate(144deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(1) .label__link {
+  transform: rotate(-144deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(2) {
+  transform: rotate(126deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(2) .label__link {
+  transform: rotate(-126deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(3) {
+  transform: rotate(108deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(3) .label__link {
+  transform: rotate(-108deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(4) {
+  transform: rotate(90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(4) .label__link {
+  transform: rotate(-90deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(5) {
+  transform: rotate(72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(5) .label__link {
+  transform: rotate(-72deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(6) {
+  transform: rotate(54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(6) .label__link {
+  transform: rotate(-54deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(7) {
+  transform: rotate(36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(7) .label__link {
+  transform: rotate(-36deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(8) {
+  transform: rotate(18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(8) .label__link {
+  transform: rotate(-18deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(9) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(9) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(10) {
+  transform: rotate(-18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-8 .label:nth-child(10) .label__link {
+  transform: rotate(18deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(1) {
+  transform: rotate(162deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(1) .label__link {
+  transform: rotate(-162deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(2) {
+  transform: rotate(144deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(2) .label__link {
+  transform: rotate(-144deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(3) {
+  transform: rotate(126deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(3) .label__link {
+  transform: rotate(-126deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(4) {
+  transform: rotate(108deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(4) .label__link {
+  transform: rotate(-108deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(5) {
+  transform: rotate(90deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(5) .label__link {
+  transform: rotate(-90deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(6) {
+  transform: rotate(72deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(6) .label__link {
+  transform: rotate(-72deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(7) {
+  transform: rotate(54deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(7) .label__link {
+  transform: rotate(-54deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(8) {
+  transform: rotate(36deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(8) .label__link {
+  transform: rotate(-36deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(9) {
+  transform: rotate(18deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(9) .label__link {
+  transform: rotate(-18deg);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(10) {
+  transform: rotate(0deg) translate(0, -50%);
+}
+main .wrapper .ring-display.-current-9 .label:nth-child(10) .label__link {
+  transform: rotate(0deg);
+}
+main .wrapper .label {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  text-align: center;
+  color: #000000;
+  transform-origin: 50% 0;
+  pointer-events: none;
+  line-height: 100px;
+  -webkit-touch-callout: none;
+  user-select: none;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+main .wrapper .label__index {
+  position: absolute;
+  top: -0.2604166667vw;
+  left: -0.2604166667vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6041666667vw;
+  height: 2.6041666667vw;
+  font-size: 1.4583333333vw;
+  font-weight: normal;
+  color: #000000;
+  background-color: #ffffff;
+  border: solid 0.9px #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 4.7px 0 rgba(0, 0, 0, 0.75);
+  line-height: 2;
+  letter-spacing: 0.2em;
+  transition: all 0.4s 0.4s ease;
+}
+main .wrapper .label__link {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 9.1145833333vw;
+  height: 9.1145833333vw;
+  z-index: 3;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+}
+main .wrapper .label__link-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9.1145833333vw;
+  height: 9.1145833333vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 4.7px 0 rgba(0, 0, 0, 0.75);
+  transition: all 0.4s 0.4s ease;
+}
+main .wrapper .label__link-box.-active {
+  width: 33.8541666667vw;
+  height: 33.8541666667vw;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+main .wrapper .label__link-box-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+main .wrapper .label__link-inner {
+  display: block;
+  font-size: 1.9270833333vw;
+  font-weight: bold;
+  font-weight: normal;
+  text-align: center;
+  text-indent: 0.2em;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+  color: #000000;
+}
+main .wrapper .label__link-desc {
+  position: relative;
+  padding-top: 2.34375vw;
+  padding-right: 5.7291666667vw;
+  padding-bottom: 2.6041666667vw;
+  padding-left: 5.7291666667vw;
+  font-size: 1.25vw;
+  font-weight: normal;
+  text-align: center;
+  color: #000000;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+main .wrapper .label__link-desc::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+  width: 7.8125vw;
+  height: 4px;
+  background: rgba(193, 153, 67, 0.5);
+}
+
+/*# sourceMappingURL=index.css.map */
